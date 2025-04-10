@@ -17,6 +17,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
+    @GetMapping
     public Iterable<Book> get() {
         return bookService.viewBookList();
     }
@@ -26,7 +27,7 @@ public class BookController {
         return bookService.viewBookDetails(isbn);
     }
 
-    @PostMapping
+     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Book post(@Valid @RequestBody Book book) {
         return bookService.addBookToCatalog(book);
