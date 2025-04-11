@@ -2,8 +2,8 @@ name: Commit Stage
 on: push
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: dawabookshop/catalog-service
+  REGISTRY: ghcr.io/dawabookshop/catalog-service
+  IMAGE_NAME: catalog-service
   VERSION: latest
 
 permissions:
